@@ -2,10 +2,3 @@
 az deployment group create --resource-group YourRG --template-file 'yourtemplate' -c
 
 az deployment group create --resource-group ContosoCoffee --template-file 'deployment.bicep' -c
-
-
-
-
-
-
-nslookup ejdcontosocoffee.trafficmanager.net
