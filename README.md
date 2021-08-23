@@ -4,13 +4,19 @@ This is my solution to a Case Study in the AZ-104 course. Below is a visual repr
 
 ## User accounts
 
-Contoso Coffee required 3 Administrators, Bob, Dave and Mark. Based on the Case description i granted them the access they needed. The diagram below shows the roles and scope i assigned to the users.
+Contoso Coffee required 3 Administrators, Bob, Dave and Mark. Based on the Case description I granted them the access they needed. The diagram below shows the roles and scope I assigned to the users with Azure RBAC.
+
+* Bob is the owner of Contoso Coofee and therefore should be assigned the owner role scoped to the subscription. In this way he has full administration access to the subscription and the resources bound to it.
+
+* Dave is going to administer the website. Therefore he should be assigned the contributer role scoped to the resource group that contains the website. In this way he has full admin access to the resources related to the website, exept managing other users access to the resources.
+
+* Mark require read access to the resources. Therefore he should be assigned the reader role scoped to the resource group.
 
 ![User Diagram](./Diagrams/Useraccounts.jpg)
 
 ## Website hosting
 
-Contoso Coffee wants to host a globally accessible website. They want their users to be able to access a local server. Therefore i deployed two websites, one in East US for the US users and one in UK South for their UK users. To route the users to their local server i placed a Traffic Manager in front of the websites utulizing the Performance routing method.
+Contoso Coffee wants to host a globally accessible website. They want their users to be able to access a local server. Therefore I deployed two websites, one in East US for the US users and one in UK South for their UK users. To route the users to their local server I placed a Traffic Manager in front of the websites utulizing the Performance routing method.
 
 ![Website Diagram](./Diagrams/Websites.jpg)
 
