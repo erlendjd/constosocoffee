@@ -9,9 +9,9 @@ param location2 string = 'eastus'
 param serverFarm2Name string = 'ASP-CCoffee-US'
 param webApp2Name string = 'CCoffeeUS'
 
-param aspSKU string = 'S1'
+param aspSKU string = 'F1'
 param trafficManagerName string = 'ContosoCoffeeTM'
-param trafficManagerDNSName string = 'EJDContosoCoffee'
+param trafficManagerDNSName string = 'ContosoCoffee'
 
 resource serverFarm1 'Microsoft.Web/serverfarms@2021-01-15' = {
   name: serverFarm1Name

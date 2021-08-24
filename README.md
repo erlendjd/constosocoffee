@@ -4,7 +4,7 @@ This is my solution to a Case Study in the AZ-104 course. Below is a visual repr
 
 ## User accounts
 
-Contoso Coffee required 3 Administrators, Bob, Dave and Mark. Based on the Case description I granted them the access they needed. The diagram below shows the roles and scope I assigned to the users with Azure RBAC.
+Contoso Coffee required 3 Administrators, Bob, Dave and Mark. Based on the Case description I granted them the access they needed. The diagram below shows the roles and scope I assigned to the users.
 
 * Bob is the owner of Contoso Coofee and therefore should be assigned the role global administrator in Azure AD.
 
@@ -16,9 +16,12 @@ Contoso Coffee required 3 Administrators, Bob, Dave and Mark. Based on the Case 
 
 ## Website hosting
 
-Contoso Coffee wants to host a globally accessible website. They want their users to be able to access a local server. Therefore I deployed two websites, one in East US for the US users and one in UK South for their UK users. To route the users to their local server I placed a Traffic Manager in front of the websites utulizing the Performance routing method.
+Contoso Coffee wants to host a globally accessible website. They want their users to be able to access a local server. Therefore I deployed two websites, one in East US for the US users and one in UK South for their UK users. To route the users to their local server I placed a Traffic Manager in front of the websites utulizing the Performance routing method. With the Traffic Manager users accessing the website are automatically routed to the closest web app based on the Traffic Managers latency table. 
 
 ![Website Diagram](./Diagrams/Websites.jpg)
+
+
+For more info on Performance routing method go to: https://docs.microsoft.com/en-us/azure/traffic-manager/traffic-manager-routing-methods#performance-traffic-routing-method
 
 ## Contoso Coffee data storage
 
