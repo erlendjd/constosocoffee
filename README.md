@@ -6,7 +6,7 @@ This is my solution to a Case Study in the AZ-104 course. Below is a visual repr
 
 Contoso Coffee required 3 Administrators, Bob, Dave and Mark. Based on the Case description I granted them the access they needed. The diagram below shows the roles and scope I assigned to the users with Azure RBAC.
 
-* Bob is the owner of Contoso Coofee and therefore should be assigned the owner role scoped to the subscription. In this way he has full administration access to the subscription and the resources bound to it.
+* Bob is the owner of Contoso Coofee and therefore should be assigned the role global administrator in Azure AD.
 
 * Dave is going to administer the website. Therefore he should be assigned the contributer role scoped to the resource group that contains the website. In this way he has full admin access to the resources related to the website, exept managing other users access to the resources.
 
