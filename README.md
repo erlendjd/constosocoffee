@@ -1,6 +1,6 @@
 # Contoso Coffee Shop Case Study
 
-This is my solution to a Case Study in the AZ-104 course. Below is a visual representation of the solution. In the Templates folder you can find a Bicep template to deploy the resources, with some guidance to deploy it.
+This is my solution to a Case Study in the AZ-104 course. Below is a visual representation of the solution. Under "Templates" you can find a Bicep template to deploy the webapp resources, with some guidance to deploy it. I also included guidance to assigning roles under "User-accounts".
 
 ## User accounts
 
@@ -25,7 +25,8 @@ For more info on Performance routing method go to: https://docs.microsoft.com/en
 
 ## Contoso Coffee data storage
 
-**From case description:**
-Contoso coffee is planning to store a large amount of image information that will be shared with staff members and clients. These images will be scans of 35 and 120 film for hipster photography that will be displayed around the coffee shop. The storage solution should minimise costs by automatically archiving data onto slower storage when required. A SAS key solution should be created for a future image gallery solution to display images on a TV in the Coffee Shop running a small Raspberry Pi solution locally hosting a web page to display the images. Bonus points for creating an image display web app.
+Contoso Coffee is planning to store large amount of images, planned to be displayed on screens in the coffee shop. Data should also be automatically archived.
+
+To solve this issue i decided to create a storage account and a blob container within the storage account for storing the images. This is represented in the diagram bellow. For access to the container one simply generates Shared access tokens. In this way one can give the developers of the image display app the SAS URL so they can integrate the images into the app. To meet the requirements of archiving data I configured a Lifecycle management rule that archives base blobs that havent been modified in 30 days.
 
 ![Storage Diagram (Coming soon!)](./Diagrams/Storage.jpg)

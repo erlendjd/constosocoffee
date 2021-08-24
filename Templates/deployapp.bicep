@@ -9,7 +9,7 @@ param location2 string = 'eastus'
 param serverFarm2Name string = 'ASP-CCoffee-US'
 param webApp2Name string = 'CCoffeeUS'
 
-param aspSKU string = 'F1'
+param aspSKU string = 'S1'
 param trafficManagerName string = 'ContosoCoffeeTM'
 param trafficManagerDNSName string = 'ContosoCoffee'
 

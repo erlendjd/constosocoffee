@@ -32,7 +32,3 @@ Get-AzureADDirectoryRoleMember -ObjectId $roleObjectId
 
 # In case you want to remove the role assignment
 Remove-AzureADDirectoryRoleMember -ObjectId $roleObjectId -MemberId $userObjectId
-
-
-
-Get-AzRoleAssignment -ResourceGroupName "ContosoCoffee" -SignInName "mark@edyngesethazoutlook.onmicrosoft.com" | Select-Object DisplayName, RoleDefinitionName, Scope
